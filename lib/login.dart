@@ -223,6 +223,7 @@ class _TelaLoginState extends State<TelaLogin> {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         body: AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
@@ -231,7 +232,7 @@ class _TelaLoginState extends State<TelaLogin> {
         child: Stack(
           children: <Widget>[
             Container(
-              height: double.infinity,
+              height: screenHeight,
               width: double.infinity,
               decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -247,10 +248,10 @@ class _TelaLoginState extends State<TelaLogin> {
             Container(
                 height: double.infinity,
                 child: SingleChildScrollView(
-                    physics: AlwaysScrollableScrollPhysics(),
+                    //physics: AlwaysScrollableScrollPhysics(),
                     padding: EdgeInsets.symmetric(
                       horizontal: 40.0,
-                      vertical: 120.0,
+                      vertical: 51.0,
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
