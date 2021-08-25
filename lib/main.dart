@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:projeto/database/app_database.dart';
-import 'package:projeto/user.dart';
+import 'user.dart';
+import './database/app_database.dart';
 import 'telas/login.dart';
 
-void main() {
+void main() async {
   runApp(MyApp());
-  save(User(0, 'eduardo@teste.com', 'jooj123')).then((id) {
+  /*save(User(0, 'eduardo@teste.com', 'jooj123')).then((id) {
     findAll().then((users) => debugPrint(users.toString()));
-  });
+  });*/
+  WidgetsFlutterBinding.ensureInitialized();
 }
 
 class MyApp extends StatelessWidget {
